@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
     }
 body {
-    background-color: ${props => props.theme["grey-800"]};
+    background-color: ${props => props.theme["grey-700"]};
     color: ${props => props.theme["grey-100"]};
     -webkit-font-smoothing: antialiased;
 }
