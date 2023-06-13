@@ -4,11 +4,11 @@
 ## Controle de Entrada/Saída
 ## Control Incomes/Outcomes
 
-Pode conferir as funcionalidades no link [ICYou Meu guito](https://meuguito-dusky.vercel.app/ "Site do projeto").
+Pode conferir as funcionalidades no link [ICYou Meu guito](https://meuguito.vercel.app/ "Site do projeto").
 
-### This is a React project for financial management that allows you to manage income and expense ### transactions. The application uses an API provided by json-server to populate an object file ### with the financial transactions. .
+### This is a React project for financial management that allows you to manage income and expense transactions. The application uses an API provided by json-server to populate an object file with the financial transactions. .
 
-### Este é um projeto React de controle financeiro que permite gerenciar transações de entrada e ### saída. O aplicativo utiliza uma API fornecida pelo json-server para alimentar um arquivo de ### objetos com as transações financeiras.
+### Este é um projeto React de controle financeiro que permite gerenciar transações de entrada e saída. O aplicativo utiliza uma API fornecida pelo json-server para alimentar um arquivo de objetos com as transações financeiras.
 
 ## Layout
 ![Web 1](https://github.com/diwberg/meuguito/blob/main/assets/readme/web1.png)
@@ -43,7 +43,7 @@ Pode conferir as funcionalidades no link [ICYou Meu guito](https://meuguito-dusk
  - Stateless Component
  - Json-Server para simular API RESTful
 ## Demo
-Confira a demo do projeto em funcionamento: (https://meuguito-dusky.vercel.app/)
+Confira a demo do projeto em funcionamento: (https://meuguito.vercel.app/)
 
 # Como executar o projeto
 
