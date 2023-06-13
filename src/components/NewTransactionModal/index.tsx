@@ -24,7 +24,7 @@ export function NewTransactionModal() {
     control,
     register,
     handleSubmit,
-    formState: { isSubmitting, isSubmitSuccessful },
+    formState: { isSubmitting },
     reset,
   } = useForm<NewTransactionFormInput>({
     resolver: zodResolver(newTransactionFormSchema),
