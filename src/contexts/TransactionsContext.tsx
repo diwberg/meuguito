@@ -29,14 +29,7 @@ interface TransactionProviderProps {
     children: ReactNode
 }
 export function TransactionProvider({ children }: TransactionProviderProps) {
-    const [transactions, setTransactions] = useState<TransactionsProps[]>([{
-        id: 1,
-        description: 'test',
-        type: 'income',
-        price: 100,
-        category: 'test',
-        created_at: '2020-01-01T00:00:00.000Z'
-    }])
+    const [transactions, setTransactions] = useState<TransactionsProps[]>([])
     const localStorageName = '@ICYou_Meuguito:TransactionStates-v1.0.0'
     const storedStateAsJson = localStorage.getItem(localStorageName)
     
@@ -44,7 +37,7 @@ export function TransactionProvider({ children }: TransactionProviderProps) {
         if(storedStateAsJson){
             setTransactions(JSON.parse(storedStateAsJson))
         }else {
-            setTransactions((state) => [...state])
+            setTransactions([])
             localStorage.setItem(localStorageName, JSON.stringify(transactions))
         }
         /*JSON-API
