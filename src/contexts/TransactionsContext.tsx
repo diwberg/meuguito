@@ -45,7 +45,7 @@ export function TransactionProvider({ children }: TransactionProviderProps) {
             setTransactions(JSON.parse(storedStateAsJson))
         }else {
             setTransactions([])
-            localStorage.setItem(localStorageName, JSON.stringify(transactions))    
+            localStorage.setItem(localStorageName, JSON.stringify(transactions))
         }
         /*JSON-API
         const response = await api.get('/transactions', { 
