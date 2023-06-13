@@ -18,7 +18,7 @@ export const TransactionsTable = styled.table`
     background: ${(props) => props.theme["grey-600"]};
   }
 td:first-child {
-  width: 50%;
+  width: 40%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }

@@ -2,6 +2,28 @@ import styled from "styled-components";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as RadioGroup from "@radix-ui/react-radio-group";
 
+export const NewTransactionButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 50px;
+  border: 0;
+  padding: 0 1.25rem;
+  background: ${ props => props.theme["purple-500"]};
+  color: ${ props => props.theme["grey-100"]};
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: ${ props => props.theme["purple-300"]};
+    color: ${ props => props.theme["white"]};
+  }
+
+`
+
 export const Overlay = styled(Dialog.Overlay)`
   position: fixed;
   width: 100vw;
@@ -32,7 +54,7 @@ export const Content = styled(Dialog.Content)`
         border-radius: 8px;
         border: 0;
         background-color: ${props => props.theme["grey-900"]};
-        color: ${props => props.theme["grey-500"]};
+        color: ${props => props.theme["grey-100"]};
         padding: 1rem;
 
         &::placeholder {
@@ -54,7 +76,12 @@ export const Content = styled(Dialog.Content)`
         border-radius: 8px;
         margin-top: 1rem;
         cursor: pointer;
-        &:hover {
+
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.5;
+        }
+        &:not(:disabled):hover {
             background-color: ${props => props.theme["purple-300"]};
             transition: background 0.3s;
         }
@@ -76,6 +103,12 @@ export const CloseBtn = styled(Dialog.Close)`
     &:hover {
       color: ${props => props.theme["purple-500"]};
     }
+`
+export const Title = styled(Dialog.Title)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 `
 export const TransactionType = styled(RadioGroup.Root)`
   display: grid;
@@ -121,3 +154,4 @@ export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButt
     font-weight: bold;
    }
 `
+

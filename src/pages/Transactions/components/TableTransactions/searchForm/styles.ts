@@ -18,7 +18,9 @@ export const SearchFarmContainer = styled.form`
     &:focus {
       box-shadow: 0 0 0 2px ${props => props.theme["purple-500"]};
     }
+
   }
+        
   button {
     border-radius: 8px;
     display: flex;
@@ -32,11 +34,19 @@ export const SearchFarmContainer = styled.form`
     font-weight: bold;
     border-radius: 8px;
 
-    &:hover {
+    &:not(disabled):hover {
         background-color: ${props => props.theme["purple-500"]};
         border-color: ${props => props.theme["purple-500"]};
         color: ${props => props.theme.white};
         transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      }
+      
+      &:disabled {
+        background-color: ${props => props.theme["purple-500"]};
+        color: ${props => props.theme.white};
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+      
     }
-  }
-`
+    `

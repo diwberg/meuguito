@@ -1,0 +1,116 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Salário",
+      "type": "income",
+      "category": "Venda",
+      "price": 3000,
+      "created_at": "2023-05-12T20:49:02.051Z"
+    },
+    {
+      "id": 2,
+      "description": "Desenvolvimento de site",
+      "type": "outcome",
+      "category": "Compra",
+      "price": 3000,
+      "created_at": "2023-03-12T20:49:02.051Z"
+    },
+    {
+      "id": 3,
+      "description": "Deslocamento",
+      "type": "outcome",
+      "category": "Despesas",
+      "price": 50,
+      "created_at": "2023-05-15T20:49:02.051Z"
+    },
+    {
+      "id": 4,
+      "description": "Alimentação",
+      "type": "outcome",
+      "category": "Despesas",
+      "price": 200,
+      "created_at": "2023-06-11T20:49:02.051Z"
+    },
+    {
+      "id": 5,
+      "description": "Compra de Dominio",
+      "type": "outcome",
+      "category": "Compra",
+      "price": 1000,
+      "created_at": "2023-01-02T20:49:02.051Z"
+    },
+    {
+      "id": 6,
+      "description": "Porcentagem do budget",
+      "type": "income",
+      "category": "Recebimento",
+      "price": 3000,
+      "created_at": "2023-02-11T20:49:02.051Z"
+    },
+    {
+      "description": "Compra de aplicativo",
+      "price": 2000,
+      "category": "Aquisição",
+      "type": "outcome",
+      "created_at": "2023-06-13T00:27:16.405Z",
+      "id": 7
+    },
+    {
+      "description": "Jantar",
+      "price": 30,
+      "category": "Alimentação",
+      "type": "outcome",
+      "created_at": "2023-06-13T00:57:28.472Z",
+      "id": 8
+    },
+    {
+      "description": "Salário",
+      "price": 50000,
+      "category": "Start-up",
+      "type": "income",
+      "created_at": "2023-06-13T01:19:01.394Z",
+      "id": 9
+    },
+    {
+      "description": "Venda de aplicativo",
+      "price": 2000,
+      "category": "Receita",
+      "type": "income",
+      "created_at": "2023-06-13T02:19:09.590Z",
+      "id": 10
+    },
+    {
+      "description": "Aplicativo",
+      "price": 5000,
+      "category": "Aquisição",
+      "type": "outcome",
+      "created_at": "2023-06-13T12:11:20.051Z",
+      "id": 11
+    },
+    {
+      "description": "Automovel Tesla",
+      "price": 40000,
+      "category": "Aquisição",
+      "type": "outcome",
+      "created_at": "2023-06-13T12:12:08.372Z",
+      "id": 12
+    },
+    {
+      "description": "Venda de Casa",
+      "price": 150000,
+      "category": "Venda de Imovel",
+      "type": "income",
+      "created_at": "2023-06-13T12:13:21.318Z",
+      "id": 13
+    },
+    {
+      "description": "Initial Outcome",
+      "price": 250,
+      "category": "Travel",
+      "type": "outcome",
+      "created_at": "2023-06-13T12:30:20.842Z",
+      "id": 14
+    }
+  ]
+}
