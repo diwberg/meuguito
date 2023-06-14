@@ -33,9 +33,14 @@ export function TransactionProvider({ children }: TransactionProviderProps) {
     const localStorageName = '@ICYou_Meuguito:TransactionStates-v1.0.0'
     const storedStateAsJson = localStorage.getItem(localStorageName)
     
-    async function getTransactions() {
+    async function getTransactions(query?: string) {
         if(storedStateAsJson){
-            setTransactions(JSON.parse(storedStateAsJson))
+            const dataStorage = JSON.parse(storedStateAsJson)
+            if(query){
+                setTransactions(dataStorage.filter((transaction: { description: string; }) => transaction.description.toLowerCase().includes(query.toLowerCase())))
+            }else{
+                setTransactions(JSON.parse(dataStorage))
+            }
         }else {
             setTransactions([])
             localStorage.setItem(localStorageName, JSON.stringify(transactions))
