@@ -19,7 +19,7 @@ export interface TransactionsProps {
 
 interface TransactionContextProps {
     transactions: TransactionsProps[];
-    getTransactions: (query?: string) => Promise<void>
+    getTransactions: (query?: string) => void
     CreateTransaction: (data: CreateTransactionInput) => Promise<void>
 }
 
@@ -33,17 +33,20 @@ export function TransactionProvider({ children }: TransactionProviderProps) {
     const localStorageName = '@ICYou_Meuguito:TransactionStates-v1.0.0'
     const storedStateAsJson = localStorage.getItem(localStorageName)
     
-    async function getTransactions(query?: string) {
+    function getTransactions(query?: string) {
         if(storedStateAsJson){
             const dataStorage = JSON.parse(storedStateAsJson)
             if(query){
-                setTransactions(dataStorage.filter((transaction: { description: string; }) => transaction.description.toLowerCase().includes(query.toLowerCase())))
-            }else{
-                setTransactions(JSON.parse(dataStorage))
+                return setTransactions(
+                    dataStorage.filter((transaction: TransactionsProps) => (
+                        transaction.description.toLowerCase().includes(query.toLowerCase()) ||
+                        transaction.type.toLowerCase().includes(query.toLowerCase()) ||
+                        transaction.category.toLowerCase().includes(query.toLowerCase()) ||
+                        transaction.price.toString().includes(query.toLowerCase())
+                    )
+                    ))
             }
-        }else {
-            setTransactions([])
-            localStorage.setItem(localStorageName, JSON.stringify(transactions))
+            setTransactions(dataStorage)
         }
         /*JSON-API
         const response = await api.get('/transactions', { 
@@ -70,14 +73,17 @@ export function TransactionProvider({ children }: TransactionProviderProps) {
             category: data.category,
             created_at: new Date().toISOString()
         }
-        setTransactions((state) => ([...state, newTransactionData]))
+        setTransactions((state) => {
+            const newState = [...state, newTransactionData]
+            localStorage.setItem(localStorageName, JSON.stringify(newState))
+            return newState
+        })
         /*JSON-API
         const response = await api.post('/transactions', newTransactionData,
         })
         setTransactions((state) => [response.data, ...state])
         */
     }
-localStorage.setItem(localStorageName, JSON.stringify(transactions))
   
     return (
     <TransactionsContext.Provider value={{ 
