@@ -42,7 +42,8 @@ export function TransactionProvider({ children }: TransactionProviderProps) {
                         transaction.description.toLowerCase().includes(query.toLowerCase()) ||
                         transaction.type.toLowerCase().includes(query.toLowerCase()) ||
                         transaction.category.toLowerCase().includes(query.toLowerCase()) ||
-                        transaction.price.toString().includes(query.toLowerCase())
+                        transaction.price.toString().includes(query.toLowerCase()) ||
+                        transaction.created_at.toLowerCase().includes(query.toLowerCase())
                     )
                     ))
             }
